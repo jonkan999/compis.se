@@ -124,6 +124,7 @@
 .section-hero {
     padding: 4.8rem 0 9.6rem 0;
     box-shadow: 0 4px 4px -4px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
   }
   
   .hero {
@@ -132,6 +133,7 @@
     height: 50rem;
     margin: 0 auto;
     padding: 0 3.2rem;
+
   }
   
   .hero-text-box {
@@ -170,7 +172,6 @@
     border-radius: 3rem;
     box-shadow: 0 0.1rem 0.5rem 0 rgba(75, 25, 25, 0.301);
     text-decoration: none;
-
   }
 
   .hero-card:hover,
