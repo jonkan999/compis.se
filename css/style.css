@@ -224,7 +224,7 @@
   .compis-helper-image {
     position: absolute;
     top:1%;
-    left:65%;
+    left:75%;
     transform: translate(0,100%);
     
   }
@@ -251,7 +251,9 @@
     display: flex;
     gap: 2rem;
     overflow: hidden;
-    padding: 3rem 0 0 0;
+    padding: 3rem 1rem 1rem 1rem;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
+    border-radius: 3rem;
 }
 
 .telefoni-content-box{
@@ -270,21 +272,36 @@
 }
 
 .telefoni-referral-text {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1rem;
+
     font-size: 2rem;
     color:#7d2929;
     font-weight: 600;
 }
 
 .telefoni-referral-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 3rem;
     font-size: 2rem;
     color:#7d2929;
     font-weight: 600;
+    background-color:#96e6a3 ;
+    text-align: center;
+  border-radius: 3rem;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
 }
 
 .telefoni-referral-link:hover,
 .telefoni-referral-link:active
  {
     color: #af3939;
+    background-color:#78df89 ;
 }
 
 
@@ -303,13 +320,14 @@
 .top-choice-banner{
     position: absolute;
     top:5%;
-    left:73%;
-    width: 23rem;
-    text-align: right;
+    left:71%;
+    width: 25rem;
+    text-align: center;
     font-size: 2rem;
     text-transform: uppercase;
     color: #4b1919;
     background-color: #f6bd9e;
+    border-top-right-radius: 3rem;
 }
 
 /***************************** */

@@ -129,8 +129,8 @@
     }
 
     .compis-helper-image {
-      top:-30%;
-      left:55%;    }
+      top:-27%;
+      left:72%;    }
   
   }
   
@@ -152,7 +152,7 @@
 
     .compis-helper-image {
       top:-28%;
-      left:48%;    
+      left:65%;    
     }
 
     .grid--footer {
@@ -175,6 +175,8 @@
     .copyright {
       margin: 0 auto 2rem auto;
     }
+
+    
  
   }
   
@@ -197,6 +199,10 @@
       column-gap: 2rem;
     }
 
+    .container.hero-grid {
+      padding: 0 3.2rem 0 0;
+  }
+
     .hero-card{
       width: 18rem;
       height: 10rem;
@@ -215,8 +221,10 @@
   }
 
     .compis-helper-image {
-      top:-27%;
-      left:38%;    }
+      width: 31rem;
+      top:-7%;
+      left:62%;   
+     }
 
  
   }
@@ -235,10 +243,10 @@
   }
 
     .call-box {
-      gap: 12rem;;
+      gap: 8rem;;
     }
     .hero {
-      padding: 0 3.2rem 0 0;
+      padding: 0 3.2rem 0 3.2rem;
       height: 47rem;
   }
 
@@ -275,8 +283,10 @@
   }
 
     .compis-helper-image {
-      top:-32%;
-      left:25%;    }
+      width: 25rem;
+      top:11%;
+      left:63%;    
+    }
  
   }
   
