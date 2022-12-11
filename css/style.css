@@ -232,13 +232,9 @@
 /***************************** */
 /* TELEFONI SECTION */
 /***************************** */
-.section-telefoni {
-    padding: 2.8rem 0 9.6rem 0;
-    height:100rem;
-}
 
 .list-container {
-    margin-top: 10rem;
+    margin-top: 7rem;
     display: flex;
     justify-content: center;
 }
@@ -256,12 +252,10 @@
     gap: 2rem;
     overflow: hidden;
     padding: 3rem 0 0 0;
-    
 }
 
 .telefoni-content-box{
     text-align: right;
-    
 }
 
 .heading-tertiary.telefoni-content-header{
@@ -302,6 +296,7 @@
     font-size: 3rem;
     object-fit: cover;
 }
+
 .image-description {
     text-align: center;
 }
@@ -315,7 +310,124 @@
     text-transform: uppercase;
     color: #4b1919;
     background-color: #f6bd9e;
+}
 
+/***************************** */
+/* MAT SECTION */
+/***************************** */
+
+.location-filter{
+  margin: 4rem auto 4rem auto;
+  display: flex;
+  justify-content: center;
+}
+.location-filter-list{
+  display: flex;
+  gap: 4rem;
+}
+
+.location-filter-list-element {
+  display: inline-block;
+}
+
+.location-filter-list-element a {
+  list-style: none;
+}
+
+.location-filter-list-element a{
+  font-size: 3rem;
+  color: #7d2929;
+}
+
+.mat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+
+}
+.mat-vendor {
+  position: relative;
+  width: 90rem;
+  display: flex;
+  gap: 3rem;
+  overflow: hidden;
+  padding: 3rem 0 0 0;
+}
+
+.mat-veckoblad-box {
+  margin-top: 3rem;
+  width: 30rem;
+
+}
+
+.veckoblad-image {
+  width: 30rem;
+  object-fit: cover;
+}
+
+.mat-content-box{
+  text-align: right;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.heading-tertiary.mat-content-header{
+  color:#7d2929;
+  margin-bottom:1.5rem;
+}
+
+.mat-content-description {
+  font-size: 2rem;
+  color:#7d2929;
+  margin-bottom:1rem;
+}
+
+.mat-referral-text {
+  font-size: 2rem;
+  color:#7d2929;
+  font-weight: 600;
+}
+
+.mat-referral-link {
+  font-size: 2rem;
+  color:#7d2929;
+  font-weight: 600;
+}
+
+.mat-referral-link:hover,
+.mat-referral-link:active
+{
+  color: #af3939;
+}
+
+
+.mat-image-box{
+  width:25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
+  object-fit: cover;
+}
+
+.image-description {
+  text-align: center;
+}
+.top-choice-banner-mat {
+  position: absolute;
+  top:13%;
+  left:73%;
+  width: 23rem;
+  text-align: right;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #4b1919;
+  background-color: #f6bd9e;
 }
   
 /***************************** */
