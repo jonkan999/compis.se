@@ -91,5 +91,6 @@
 
   .section {
     padding: 2.8rem 0 9.6rem 0;
-    height:100rem;
+    min-height:100rem;
+    
 }
