@@ -1,0 +1,80 @@
+<!-- Include the PDF.js library -->
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.4.456/build/pdf.min.js"></script>
+
+<!-- Create a container for the PDF viewer -->
+<div id="pdf-viewer"></div>
+
+<!-- Create buttons for navigating through the pages -->
+<button id="prev-page">Previous</button>
+<button id="next-page">Next</button>
+
+<script>
+    // Get the container for the PDF viewer
+    var pdfViewer = document.getElementById("pdf-viewer");
+
+    // Get the buttons for navigating through the pages
+    var prevPage = document.getElementById("prev-page");
+    var nextPage = document.getElementById("next-page");
+
+    // Create a new PDF.js object
+    var pdf = new PDFJS.PDFDoc({
+        url: "python\Hemköp Stockholm Fruängen C.pdf"
+    });
+
+    var currentPage = 0;
+
+    // Render the first page of the PDF
+    pdf.getPage(1).then(function(page) {
+        var scale = 1.5;
+        var viewport = page.getViewport(scale);
+
+        var canvas = document.createElement("canvas");
+        var context = canvas.getContext("2d");
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        pdfViewer.appendChild(canvas);
+
+        var renderContext = {
+            canvasContext: context,
+            viewport: viewport
+        };
+        page.render(renderContext);
+    });
+
+    // Add event listeners for the "prev" and "next" buttons
+    prevPage.addEventListener("click", function() {
+        currentPage--;
+        pdf.getPage(currentPage).then(function(page) {
+            var scale = 1.5;
+            var viewport = page.getViewport(scale);
+
+            var canvas = document.createElement("canvas");
+            var context = canvas.getContext("2d");
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            pdfViewer.appendChild(canvas);
+
+            var renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            page.render(renderContext);
+        });
+    });
+
+    nextPage.addEventListener("click", function() {
+        currentPage++;
+        pdf.getPage(currentPage).then(function(page) {
+            var scale = 1.5;
+            var viewport = page.getViewport(scale);
+
+            var canvas = document.createElement("canvas");
+            var context = canvas.getContext("2d");
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            pdfViewer.appendChild(canvas);
+
+            var renderContext = {
