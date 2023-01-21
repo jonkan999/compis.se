@@ -10,10 +10,21 @@ export function leafletFlipper(description) {
 	let nextPage = document.getElementById("next-page");
 
 	let currentPage = 1;
+	let maxPage = 1;
 
 	// Asynchronously downloads PDF
 	pdfjsLib.getDocument(`python/${description}.pdf`).promise.then((pdf) => {
 		pdf.getPage(currentPage).then(function (page) {
+			//If previous not hidden, toggle previous
+			if (!prevPage.classList[1]) {
+				prevPage.classList.toggle("inactive");
+			}
+			//If next hidden, toggle next
+			if (nextPage.classList[1]) {
+				nextPage.classList.toggle("inactive");
+			}
+			maxPage = pdf.numPages;
+			console.log("base" + currentPage);
 			let scale = 1.5;
 			let viewport = page.getViewport({ scale });
 
@@ -36,6 +47,11 @@ export function leafletFlipper(description) {
 	prevPage.addEventListener("click", function () {
 		if (currentPage > 1) {
 			currentPage--;
+			//If next hidden, toggle next
+			if (nextPage.classList[1]) {
+				nextPage.classList.toggle("inactive");
+			}
+			console.log("prev" + currentPage);
 			pdfjsLib.getDocument(`python/${description}.pdf`).promise.then((pdf) => {
 				pdf.getPage(currentPage).then(function (page) {
 					let viewport = page.getViewport({ scale: 1.5 });
@@ -60,7 +76,15 @@ export function leafletFlipper(description) {
 
 	nextPage.addEventListener("click", function () {
 		currentPage++;
-
+		//If previous hidden, toggle previous
+		if (prevPage.classList[1]) {
+			prevPage.classList.toggle("inactive");
+		}
+		//If maxPage, toggle next
+		if (maxPage === currentPage) {
+			nextPage.classList.toggle("inactive");
+		}
+		console.log("next" + currentPage);
 		pdfjsLib.getDocument(`python/${description}.pdf`).promise.then((pdf) => {
 			pdf.getPage(currentPage).then(function (page) {
 				let viewport = page.getViewport({ scale: 1.5 });

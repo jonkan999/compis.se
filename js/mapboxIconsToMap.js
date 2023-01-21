@@ -21,13 +21,15 @@ fetch("python/hk_pdf_URL_list.json")
 				.setHTML("<img src='img/HKicon.png'/>") */
 				.setLngLat(pdf_list[i].lnglat_cord)
 				.setPopup(
-					new mapboxgl.Popup({ offset: [200, 0] }) // add popups
+					new mapboxgl.Popup() // add popups
 						.setHTML(
 							`
               <div id="pdf-viewer">""</div>
-      
-              <button id="prev-page">Previous</button>
-              <button id="next-page">Next</button>`
+							<div class="button-container">
+								<button id="prev-page" class="prev-page">Previous</button>
+								<button id="next-page" class="next-page">Next</button>
+								</div>
+							`
 						)
 				)
 				.addTo(map);
@@ -39,34 +41,6 @@ fetch("python/hk_pdf_URL_list.json")
 	})
 	.catch((error) => console.log(error));
 
-// Load the pdf_list from the pickle file
-/* var pdf_list;
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "python/hk_pdf_URL_list.pkl", true);
-xhr.responseType = "arraybuffer";
-xhr.onload = function (e) {
-	var uInt8Array = new Uint8Array(this.response);
-	var db = new Papa.parse(uInt8Array);
-	pdf_list = JSON.parse(db.exec("SELECT * from json")[0].values[0][0]);
-	// Add the custom icon to the map at the geolocation specified by the geo_cord
-	for (var i = 0; i < pdf_list.length; i++) {
-		var marker = new mapboxgl.Marker({
-			color: "#ff0000",
-		})
-			.setLngLat(pdf_list[i].geo_cord)
-			.setPopup(
-				new mapboxgl.Popup({ offset: 25 }) // add popups
-					.setHTML(
-						"<h3>" +
-							pdf_list[i].description +
-							"</h3><p>" +
-							pdf_list[i].url +
-							"</p>"
-					)
-			)
-			.addTo(map);
-	}
-};
-xhr.send(); */
-pdfjsLib.GlobalWorkerOptions.workerSrc =
+/* pdfjsLib.GlobalWorkerOptions.workerSrc =
 	"https://cdn.jsdelivr.net/npm/pdfjs-dist@2.4.456/build/pdf.worker.min.js";
+ */

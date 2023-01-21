@@ -496,6 +496,26 @@
 	cursor: pointer;
 }
 
+.button-container {
+	width: 100%;
+}
+
+.prev-page {
+	width: 25%;
+	float: left;
+}
+.prev-page.inactive {
+	display: none;
+}
+
+.next-page {
+	width: 25%;
+	float: right;
+}
+.next-page.inactive {
+	display: none;
+}
+
 /***************************** */
 /* FOOTER SECTION */
 /***************************** */
