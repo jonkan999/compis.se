@@ -9,7 +9,7 @@ var map = new mapboxgl.Map({
 	zoom: 12,
 });
 
-fetch("python/hk_pdf_URL_list.json")
+fetch("python/combined_URL_list.json")
 	.then((response) => response.json())
 	.then((pdf_list) => {
 		console.log(pdf_list);

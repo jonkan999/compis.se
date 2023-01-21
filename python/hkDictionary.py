@@ -1,4 +1,4 @@
-import pickle
+
 import requests
 import json
 
@@ -8,7 +8,6 @@ pdf_list = [
     {'url': 'https://hemkop.eo.se/hkp/4613.pdf', 'description': 'Hemköp Sjövikshallen'},
     {'url': 'https://hemkop.eo.se/hkp/4190.pdf', 'description': 'Hemköp Torsplan'},
     {'url': 'https://hemkop.eo.se/hkp/4753.pdf', 'description': 'Hemköp Sickla Köpkvarter'}
-
 ]
 
 access_token = 'pk.eyJ1Ijoiam9ua2FueDMiLCJhIjoiY2t6a2NpamRlMHBnNzJwa2VwMXZienQxZSJ9.8Or2IqnhqXW72AMn6PndLg'

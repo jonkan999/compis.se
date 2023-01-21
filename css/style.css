@@ -496,6 +496,11 @@
 	cursor: pointer;
 }
 
+.leaflet-image {
+	width: 100%;
+	object-fit: cover;
+}
+
 .button-container {
 	width: 100%;
 }
